@@ -1,0 +1,36 @@
+{{ define "header" }}
+  {{ partial "navbar" . }}
+{{ end }}
+
+{{ define "main" }}
+  <main class="w-full max-w-screen-xl mx-auto px-6">
+    <div class="flex flex-col justify-center items-center min-h-screen">
+      <div class="w-fit mb-6">
+        <h1 class="font-display text-4xl md:text-6xl text-transparent bg-clip-text bg-gradient uppercase mb-6 typing">
+          Welcome
+        </h1>
+      </div>
+
+      <p class="font-semibold text-base text-center text-white uppercase tracking-wide leading-relaxed mb-8">
+        Learn Web Programming
+        <br class="block md:hidden" />
+        <b class="text-transparent bg-clip-text bg-gradient">easy</b> and
+        <b class="text-transparent bg-clip-text bg-gradient-2">fun</b>
+      </p>
+
+      <my-counter></my-counter>
+
+      <a href="#quote" class="inline-block p-2 mt-12 rounded-full bg-[#d65633] text-lg animate-bounce">
+        👇
+      </a>
+    </div>
+
+    <div id="quote" class="flex flex-col justify-center items-center min-h-screen">
+      <scroll-show></scroll-show>
+    </div>
+  </main>
+{{ end }}
+
+{{ define "footer" }}
+  {{ partial "footer" . }}
+{{ end }}

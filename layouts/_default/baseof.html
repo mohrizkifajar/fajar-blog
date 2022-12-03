@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ .Page.Title }} - {{ .Site.Title }}</title>
+    <link rel="shortcut icon" href="/vite.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/react/{{ .Site.Data.react.css }}" />
+    <script type="module" defer src="/react/{{ .Site.Data.react.js }}"></script>
+
+    <meta name="description" content="{{ .Description }}" />
+  </head>
+  <body id="home" class="bg-slate-800 text-white dark scroll-smooth">
+
+    {{ block "header" . }} {{ end }}
+    
+    {{ block "main" . }} {{ end }}
+    
+    {{ block "footer" . }} {{ end }}
+
+    <a href="#home" class="fixed bottom-4 right-4 inline-flex items-center justify-center w-8 h-8 rounded-full bg-slate-700 shadow">
+      👆
+    </a>
+
+  </body>
+</html>

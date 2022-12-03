@@ -1,0 +1,11 @@
+body {
+  color: #272626;
+  font-family: 'Poppins', sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #272626;
+    color: #fff;
+  }
+}

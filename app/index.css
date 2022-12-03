@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600;700&display=swap');
+@import './syntax.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+code {
+  @apply font-code;
+}
+
+@layer utilities {
+  .bg-gradient {
+    @apply bg-gradient-to-br from-rose-700 to-amber-400;
+  }
+
+  .bg-gradient-2 {
+    @apply bg-gradient-to-br from-green-500 to-amber-400;
+  }
+
+  .typing {
+    overflow: hidden;
+    border-right: 0.15em solid #fbbf24;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 0.42em;
+    animation: typing 3.5s steps(7, end), blink 0.75s step-end infinite;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #fbbf24;
+  }
+}
+
+*::-webkit-scrollbar {
+  @apply w-2 bg-slate-700;
+}
+
+*::-webkit-scrollbar-thumb {
+  @apply h-10 rounded-full bg-slate-500;
+}
