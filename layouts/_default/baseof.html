@@ -8,6 +8,18 @@
     <script type="module" defer src="/react/{{ .Site.Data.react.js }}"></script>
 
     <meta name="description" content="{{ .Description }}" />
+    <meta property="og:title" content="{{ .Title }}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{ .Permalink | absURL }}" />
+    <meta property="og:image" content="https://og-image-kappa-nine.vercel.app/api/og?title={{ .Title }}" />
+    <meta property="og:description" content="{{ .Description }}" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@izanami91585716">
+    <meta name="twitter:title" content="{{ .Title }}">
+    <meta name="twitter:description" content="{{ .Description }}">
+    <meta name="twitter:image" content="https://og-image-kappa-nine.vercel.app/api/og?title={{ .Title }}">
+
   </head>
   <body id="home" class="bg-slate-800 text-white dark scroll-smooth">
 

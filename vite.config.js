@@ -25,7 +25,7 @@ function syncToHugo() {
       const css = assets.filter((name) => name.includes('.css'))[0]
       await Promise.all([
         writeFile('./data/react.json', JSON.stringify({ js, css })),
-        rm('./static/react/index.html'),
+        // rm('./static/react/index.html'),
       ])
       console.log(`wrote ${js} to hugo data`)
     },
